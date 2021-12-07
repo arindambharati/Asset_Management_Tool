@@ -25,13 +25,6 @@ function App() {
   const handleSubmit =(event)=>{
 
     event.preventDefault();
-    // const newRecord={...userSignUp}
-    // //store the data
-    // console.log(records);
-    // setRecords([...records, newRecord]);
-    //  //console.log(records);
-
-    // setUserSignUp({username:"",email:"",password:"",confirm_password:""});
 
     setUserErrors(validate(userSignUp));
     setIsSubmit(true);
