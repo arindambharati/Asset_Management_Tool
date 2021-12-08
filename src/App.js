@@ -29,7 +29,7 @@ function App() {
     
   }
 
-  const [records,setRecords]=useState([]);
+  // const [records,setRecords]=useState([]);
 
   const handleSubmit =(event)=>{
 
@@ -122,7 +122,7 @@ function App() {
               </Router>
             </div>
        </div> 
-       <pre>{JSON.stringify(userSignUp,undefined,3)}</pre> 
+       {/* <pre>{JSON.stringify(userSignUp,undefined,3)}</pre>  */}
      </div>
     </div>
   );

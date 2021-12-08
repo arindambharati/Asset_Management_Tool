@@ -20,7 +20,7 @@ function LogIn() {
     
   }
 
-  const [records,setRecords]=useState([]);
+  // const [records,setRecords]=useState([]);
 
   const handleSubmit =(event)=>{
 
@@ -80,7 +80,7 @@ function LogIn() {
               <button className="button" type="submit" onClick={handleSubmit}>Log In</button>
             </div>
        </div> 
-       <pre>{JSON.stringify(userSignUp,undefined,3)}</pre> 
+       {/* <pre>{JSON.stringify(userSignUp,undefined,3)}</pre>  */}
      </div>
     </div>
   );
