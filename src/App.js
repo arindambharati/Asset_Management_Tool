@@ -1,7 +1,15 @@
 import './App.css';
 import picture from './pic3.jpg';
 import { useState,useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useRoutes,
+  useNavigate,
+} from "react-router-dom";
 
+// import { useNavigate } from 'react-router-dom';
 var fontColor='gray';
 
 function App() {
@@ -10,6 +18,7 @@ function App() {
   const [userSignUp, setUserSignUp] = useState({initialValues});
   const [userErrors, setUserErrors] = useState({});
   const [isSubmit,setIsSubmit]=useState(false);
+  // let history=useNavigate();
 
   const handleInput = (event) => {
     const name=event.target.name;
@@ -28,6 +37,7 @@ function App() {
 
     setUserErrors(validate(userSignUp));
     setIsSubmit(true);
+    // history.push(LogIn);
   }
 
   useEffect(()=> {
@@ -61,6 +71,7 @@ function App() {
     }
     return errors;
   }
+
 
   return (
     <div className="App">
@@ -105,7 +116,10 @@ function App() {
                 <p className="confirm_pwd">{userErrors.confirm_password}</p>
             </div>
             <div className="submit_Btn">
-              <button className="button" type="submit" onClick={handleSubmit}>Sign Up</button>
+              <Router>
+              <button className="button" type="submit" onClick={handleSubmit}
+              >Sign Up</button>
+              </Router>
             </div>
        </div> 
        <pre>{JSON.stringify(userSignUp,undefined,3)}</pre> 
